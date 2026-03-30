@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日计划</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div id="clock"></div>
+            <h1>今日计划</h1>
+            <div id="countdown-plaque">
+                <span>本年度剩余</span>
+                <div id="countdown-days"></div>
+                <span>天</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="project-section">
+                <div id="project-list"></div>
+            </div>
+
+            <div class="task-section">
+                <div class="section-header">
+                    <button id="show-add-task-modal-btn" class="add-btn">+</button>
+                </div>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>添加新项目</h3>
+            <input type="text" id="project-modal-input" placeholder="输入项目名称...">
+            <button id="add-project-btn">确认添加</button>
+        </div>
+    </div>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>添加新任务</h3>
+            <input type="text" id="task-modal-input" placeholder="输入任务描述...">
+            <div class="deadline-wrapper">
+                <label for="task-modal-deadline">截止时间:</label>
+                <input type="time" id="task-modal-deadline">
+            </div>
+            <button id="add-task-btn">确认添加</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
