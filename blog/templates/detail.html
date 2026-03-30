@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - 个人博客{% endblock %}
+
+{% block content %}
+    <div class="article-detail">
+        <h1>{{ article.title }}</h1>
+        <p class="golden-quote"><strong>{{ article.golden_quote }}</strong></p>
+        <p class="review">{{ article.review }}</p>
+        <div class="article-content">
+            {{ article.content | safe }}
+        </div>
+        <a href="/" class="back-link">返回首页</a>
+    </div>
+{% endblock %}

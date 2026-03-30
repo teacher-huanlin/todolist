@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}首页 - 个人博客{% endblock %}
+
+{% block content %}
+    <h1>个人博客</h1>
+    <div class="articles">
+        {% for article in articles %}
+        <div class="article-preview">
+            <h2><a href="/article/{{ article.id }}" target="_blank">{{ article.title }}</a></h2>
+            <p class="golden-quote"><strong>{{ article.golden_quote }}</strong></p>
+            <p class="review">{{ article.review }}</p>
+            <p class="summary">{{ article.summary }}...</p>
+        </div>
+        {% else %}
+        <p>暂无文章。</p>
+        {% endfor %}
+    </div>
+{% endblock %}
